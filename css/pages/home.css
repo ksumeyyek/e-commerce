@@ -17,3 +17,15 @@
   margin-top: 30px;
   flex-wrap: wrap;
 }
+/* ! Category */
+
+/* ! Product */
+.products .product-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.products {
+  margin-bottom: 40px;
+}
+/* ! Product */
