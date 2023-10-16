@@ -49,9 +49,6 @@
 }
 /* ! Blog */
 
-
-
-
 /* ! Responsive */
 @media (max-width: 768px) {
   .blogs .blog-list {
@@ -74,22 +71,24 @@
   .slider-buttons {
     display: none !important;
   }
-  .footer .brand-info{
+  .footer .brand-info {
     margin-bottom: 20px;
   }
   .widgets-row .footer-widgets > div {
     flex: unset;
   }
   .widgets-row .brand-info .footer-desc {
-    width:unset
+    width: unset;
   }
   .footer-copyright {
-    flex-direction: column;text-align: center;
+    flex-direction: column;
+    text-align: center;
     row-gap: 10px;
   }
   .footer-copyright .footer-menu {
     margin-left: unset;
   }
+ 
 }
 
 /* *search responsive */
@@ -139,3 +138,4 @@
     font-size: 16px !important;
   }
 }
+
