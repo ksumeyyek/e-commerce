@@ -128,13 +128,3 @@
     cursor: pointer;
   }
   /* ! Modal search end  */
-
-  /* *search responsive */
-@media (max-width: 992px) {
-    .modal-wrapper {
-      max-width: 370px;
-    }
-    .modal-search .results {
-      grid-template-columns: 1fr;
-    }
-  }
