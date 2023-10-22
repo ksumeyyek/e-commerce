@@ -25,8 +25,9 @@
   font-weight: 600;
 }
 .slider-item a {
-  z-index: 1;
+  z-index: -1;
   position: relative;
+
 }
 .slider .slider-buttons {
   position: absolute;
@@ -38,6 +39,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 30px;
+  
 }
 .slider .slider-buttons button {
   width: 60px;
@@ -46,6 +48,7 @@
   background-color: white;
   opacity: 0.5;
   transition: 0.2s ease all;
+  
 }
 .slider .slider-buttons button:hover {
   background-color: #1367ef;
@@ -81,3 +84,29 @@
   border-radius: 100%;
 }
 
+.slider .slider-dots .slider-dot.active {
+  opacity: 1;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media(max-width:768px){
+  .slider-item {
+    height: calc(100vh - 155px);
+  }
+  .slider-buttons {
+    display: none !important;
+  }
+}

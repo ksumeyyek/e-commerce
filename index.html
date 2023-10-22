@@ -19,7 +19,6 @@
       $(function () {
         $("#header").load("common-html/header.html");
         $("#footer").load("common-html/footer.html");
-        $("#modal-search").load("common-html/modal-search.html");
         $("#policy").load("common-html/policy.html");
       });
     </script>
@@ -29,12 +28,11 @@
     <!-- shift+alt+A -->
 
     <div id="header"></div>
-    <div id="modal-search"></div>
 
     <!--! Slider Start -->
     <section class="slider">
       <div class="slider-elements">
-        <div class="slider-item">
+        <div class="slider-item fade">
           <div class="slider-image">
             <img src="img/slider/slider1.jpg" alt="" class="img-fluid" />
           </div>
@@ -44,22 +42,42 @@
             <a href="" class="btn btn-primary btn-lg">Explore Now</a>
           </div>
         </div>
+        <div class="slider-item fade">
+          <div class="slider-image">
+            <img src="img/slider/slider2.jpg" alt="" class="img-fluid" />
+          </div>
+          <div class="container">
+            <p class="slider-title">SUMMER 2023</p>
+            <h2 class="slider-heading">Save up to 70%</h2>
+            <a href="" class="btn btn-primary btn-lg">Explore Now</a>
+          </div>
+        </div>
+        <div class="slider-item fade">
+          <div class="slider-image">
+            <img src="img/slider/slider3.jpg" alt="" class="img-fluid" />
+          </div>
+          <div class="container">
+            <p class="slider-title">SUMMER 2023</p>
+            <h2 class="slider-heading">Save up to 70%</h2>
+            <a href="" class="btn btn-primary btn-lg">Explore Now</a>
+          </div>
+        </div>
         <div class="slider-buttons">
-          <button>
+          <button onclick="plusSlide(-1)">
             <i class="bi bi-chevron-left"></i>
           </button>
-          <button>
+          <button onclick="plusSlide(1)">
             <i class="bi bi-chevron-right"></i>
           </button>
         </div>
         <div class="slider-dots">
-          <button class="slider-dot">
+          <button class="slider-dot active" onclick="currentSlide(1)">
             <span></span>
           </button>
-          <button class="slider-dot">
+          <button class="slider-dot" onclick="currentSlide(2)">
             <span></span>
           </button>
-          <button class="slider-dot">
+          <button class="slider-dot" onclick="currentSlide(3)">
             <span></span>
           </button>
         </div>
@@ -820,5 +838,6 @@
     <div id="policy"></div>
 
     <div id="footer"></div>
+    <script src="js/index.js"></script>
   </body>
 </html>
