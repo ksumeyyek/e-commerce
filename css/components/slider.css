@@ -90,7 +90,7 @@
 
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 1.5s; /*1.5 sn'de imgler 0.4'ten 1 e geçişiyor.  */
 }
 
 @keyframes fade {
