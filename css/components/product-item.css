@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  /*  */
-  flex: 1;
+  /*  flex: 1; */
+ 
 }
 .products .product-item .product-image {
   width: 100%;
