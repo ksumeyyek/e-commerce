@@ -50,6 +50,7 @@ function showSlides(n) {
 
 //! slider end
 
+
 //! add product to localStorage
 //async mantığı js ilk bitecek olan fonksiyonu tamamlıyor
 /* async function getData() {

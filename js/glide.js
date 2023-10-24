@@ -16,9 +16,9 @@ const config = {
   },
 };
 
-new Glide(".glide", config).mount();
+new Glide(".product-carousel", config).mount();
 
-const config2 = {
+ const config2 = {
   type: "carousel",
   perView: 4,
   gap: 20,
@@ -36,4 +36,5 @@ const config2 = {
   },
 };
 
-new Glide(".glide2", config2).mount();
+new Glide(".product-carousel2", config2).mount();
+ 
