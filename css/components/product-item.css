@@ -5,7 +5,6 @@
   flex-direction: column;
   position: relative;
   /*  flex: 1; */
- 
 }
 .products .product-item .product-image {
   width: 100%;
@@ -113,7 +112,6 @@
 .product-item .product-links button:hover,
 .product-item .product-links a:hover {
   opacity: 0.7;
-  
 }
 .product-wrapper {
   position: relative;
