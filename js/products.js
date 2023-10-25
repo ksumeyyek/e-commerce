@@ -1,13 +1,24 @@
 import { product1, product2 } from "./glide.js";
 
-/* function addToCart() {
-  const buttons = document.getElementsByClassName("add-to-cart");
-  buttons.forEach((element) => {
-    console.log(element);
+let products = [];
+let cart = [];
+
+function addToCart() {
+  const buttons = [...document.getElementsByClassName("add-to-cart")];
+  buttons.forEach((button) => {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      const id = e.target.dataset.id;
+      const findProduct = products.find((product) => product.id === Number(id));
+      console.log(findProduct);
+      cart.push({ ...findProduct, quantity: 1 });
+      localStorage.setItem("cart", JSON.stringify(cart));
+    });
   });
-} */
+}
+
 function productsFunc() {
-  const products = localStorage.getItem("products")
+  products = localStorage.getItem("products") 
     ? JSON.parse(localStorage.getItem("products"))
     : [];
   const productsContainer = document.getElementsByClassName("product-list");
@@ -47,7 +58,7 @@ function productsFunc() {
         </div>
         <span class="product-discount">-${item.discount}%</span>
         <div class="product-links">
-          <button class="add-to-cart>
+          <button href="#" class="add-to-cart" data-id=${item.id}>
             <i class="bi bi-basket-fill"></i>
           </button>
           <button>
@@ -65,10 +76,12 @@ function productsFunc() {
     `;
     productsContainer[0].innerHTML = results;
     productsContainer[1].innerHTML = results;
-    //addToCart();
+
+    addToCart();
   });
   product1();
   product2();
 }
 
 export default productsFunc();
+

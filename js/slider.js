@@ -22,8 +22,8 @@ function currentSlide(n) {
 function showSlides(n) {
   const slides = document.getElementsByClassName("slider-item");
   const dots = document.getElementsByClassName("slider-dot");
-  console.log(dots); // 3
-  console.log(slides.length); // 3
+  //console.log(dots);  3
+  //console.log(slides.length);  3
   if (n > slides.length) {
     // n 1 olarak buraya gelir u koşulu sağlamaz geçer yada 4 olarak gelicek ve [0]'daki img dönücek
     slideIndex = 1;

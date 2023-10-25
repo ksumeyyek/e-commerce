@@ -40,7 +40,7 @@ const searchModal = document.getElementsByClassName("modal-search");
 const btnCloseSearch = document.querySelector("#close-search-model");
 const modalSearchWrapper = document.getElementsByClassName("modal-wrapper");
 
-console.log(searchModal);
+
 btnOpenSearch.addEventListener("click", function () {
   searchModal[0].style.visibility = "visible";
   searchModal[0].style.opacity = "1";

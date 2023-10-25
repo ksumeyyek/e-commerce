@@ -108,6 +108,7 @@
   color: white;
   font-size: 14px;
   display: flex;
+  pointer-events: none;
 }
 .product-item .product-links button:hover,
 .product-item .product-links a:hover {
