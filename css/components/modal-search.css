@@ -1,4 +1,4 @@
-/* ! Modal search start  */
+/*! modal search start  */
 .modal-search {
   position: absolute;
   top: 0;
@@ -13,6 +13,7 @@
   opacity: 0;
   transition: 0.3s ease all;
 }
+
 .modal-search::after {
   content: "";
   width: 100%;
@@ -23,12 +24,13 @@
   left: 0;
   opacity: 0.5;
 }
+
 .modal-wrapper {
   max-width: 800px;
   width: 100%;
-  background-color: white;
-  z-index: 10;
+  background-color: #fff;
   position: fixed;
+  z-index: 10;
   padding: 30px;
 }
 
@@ -36,17 +38,20 @@
   font-size: 30px;
   font-weight: 600;
 }
+
 .modal-search .modal-text {
   font-size: 14px;
   color: #7a7a7a;
   padding-bottom: 15px;
   border-bottom: 1px solid #dee0ea;
 }
+
 .modal-search .search-form {
   margin-top: 15px;
   display: flex;
   position: relative;
 }
+
 .modal-search .search-form::after {
   content: "";
   width: 100%;
@@ -57,10 +62,11 @@
 }
 
 .modal-search .search-form input {
-  height: 42px;
   width: 100%;
+  max-height: 42px;
   border-color: #dee0ea !important;
 }
+
 .modal-search .search-form button {
   position: absolute;
   right: 0;
@@ -76,52 +82,63 @@
   font-size: 18px;
   color: #7a7a7a;
 }
+
 .modal-search .search-results {
   margin-top: 30px;
 }
+
 .modal-search .search-heading {
   padding: 15px;
-  border: 1px solid #dee0ea;
   background-color: #f9f9f9;
+  border: 1px solid #dee0ea;
 }
+
 .modal-search .search-heading h3 {
   font-size: 16px;
   font-weight: 600;
 }
+
 .modal-search .results {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 1 row 2 items */
+  grid-template-columns: 1fr 1fr;
   border-left: 1px solid #dee0ea;
 }
+
 .modal-search .result-item {
   display: flex;
+  column-gap: 15px;
   align-items: center;
   padding: 15px;
   border-bottom: 1px solid #dee0ea;
   border-right: 1px solid #dee0ea;
-  column-gap: 15px;
+  transition: background-color 0.2s eae;
 }
+
 .modal-search .result-item:hover {
   background-color: #f9f9f9;
-  transition: background-color 0.2s ease;
 }
+
 .modal-search .search-thumb {
-  max-width: 68px;
+  max-width: 65px;
   width: 100%;
 }
+
 .modal-search .search-info {
   font-size: 14px;
   display: flex;
   flex-direction: column;
 }
+
 .modal-search .search-sku {
   color: #7a7a7a;
   margin: 2px 0;
 }
+
 .modal-search .search-price {
   font-weight: 600;
-  color: red;
+  color: #dc3545;
 }
+
 .modal-search .bi-x-circle {
   position: absolute;
   top: 5px;
@@ -129,4 +146,16 @@
   font-size: 20px;
   cursor: pointer;
 }
-/* ! Modal search end  */
+
+/*! modal search end  */
+
+/* search responsive  */
+
+@media (max-width: 992px) {
+  .modal-search .modal-wrapper {
+    max-width: 370px;
+  }
+  .modal-search .results {
+    grid-template-columns: 1fr;
+  }
+}
