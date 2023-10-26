@@ -2,8 +2,13 @@
   width: 50%;
   padding-right: 15px;
 }
-
+.single-image-wrapper{
+  overflow: hidden;
+}
 .single-product .single-image-wrapper img {
+  object-fit: cover;
+  transform-origin: center;
+  height: 100%;
   width: 100%;
 }
 
