@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Commerce</title>
-     <!--! Glide.js Css CDN  -->
-     <link
-     rel="stylesheet"
-     href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css"
-   />
+    <!--! Glide.js Css CDN  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css"
+    />
     <!--! Boostrap Icons CDN  -->
     <link
       rel="stylesheet"
@@ -293,13 +293,19 @@
                 </div>
                 <div class="product-thumb">
                   <div class="glide__track" data-glide-el="track">
-                    <ol class="gallery-thumbs glide__slides"> </ol>
+                    <ol class="gallery-thumbs glide__slides"></ol>
                   </div>
                   <div class="glide__arrows" data-glide-el="controls">
-                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                    <button
+                      class="glide__arrow glide__arrow--left"
+                      data-glide-dir="<"
+                    >
                       <i class="bi bi-chevron-left"></i>
                     </button>
-                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                    <button
+                      class="glide__arrow glide__arrow--right"
+                      data-glide-dir=">"
+                    >
                       <i class="bi bi-chevron-right"></i>
                     </button>
                   </div>
@@ -332,7 +338,7 @@
                         <span>Color</span>
                       </div>
                       <div class="colors-wrapper">
-                        <div class="color-wrapper">
+                        <div class="color-wrapper active">
                           <label class="blue-color">
                             <input type="radio" name="product-color" />
                           </label>
@@ -342,7 +348,7 @@
                             <input type="radio" name="product-color" />
                           </label>
                         </div>
-                        <div class="color-wrapper active">
+                        <div class="color-wrapper">
                           <label class="green-color">
                             <input type="radio" name="product-color" />
                           </label>
@@ -367,8 +373,12 @@
                       </div>
                     </div>
                     <div class="cart-button">
-                      <input type="number" value="1" min="1" />
-                      <button class="btn btn-lg btn-primary">
+                      <input type="number" value="1" min="1" id="quantity"/>
+                      <button
+                        class="btn btn-lg btn-primary"
+                        id="add-to-cart"
+                        type="button"
+                      >
                         Add to cart
                       </button>
                     </div>
