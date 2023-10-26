@@ -3,6 +3,8 @@ import { singleThumbs } from "./glide.js";
 import zoomFunc from "./single-product/zoom.js";
 import colorsFunc from "./single-product/colors.js";
 import valuesFunc from "./single-product/values.js";
+import tabsFunc from "./single-product/tabs.js";
+import commentsFunc from "./single-product/comment.js";
 
 const productId = localStorage.getItem("productId")
   ? JSON.parse(localStorage.getItem("productId"))
@@ -59,16 +61,16 @@ let cart = localStorage.getItem("cart")
   ? JSON.parse(localStorage.getItem("cart"))
   : [];
 const findCart = cart.find((item) => item.id === findProduct.id);
-const btnAddtoCart =document.getElementById("add-to-cart")
-const quantityDOM =document.getElementById("quantity")
+const btnAddtoCart = document.getElementById("add-to-cart");
+const quantityDOM = document.getElementById("quantity");
 const cartItems = document.querySelector(".header-cart-count");
-if(findCart){
-  btnAddtoCart.setAttribute("disabled","disabled")
-}else{
-  btnAddtoCart.addEventListener("click",function(){
-    cart.push({...findProduct,quantity:Number(quantityDOM.value)})
-    btnAddtoCart.setAttribute("disabled","disabled")
-    localStorage.setItem("cart",JSON.stringify(cart))
-    cartItems.innerHTML=cart.length
-  })
+if (findCart) {
+  btnAddtoCart.setAttribute("disabled", "disabled");
+} else {
+  btnAddtoCart.addEventListener("click", function () {
+    cart.push({ ...findProduct, quantity: Number(quantityDOM.value) });
+    btnAddtoCart.setAttribute("disabled", "disabled");
+    localStorage.setItem("cart", JSON.stringify(cart));
+    cartItems.innerHTML = cart.length;
+  });
 }
