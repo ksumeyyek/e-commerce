@@ -1,3 +1,7 @@
+//! sistem açıklaması
+/*ekran küçüldüğünde çıkan menu ikonuna tıkladığımızda css dosyasında -100% olan left'i 0 yapıyoruz.
+sidebar açıldıığında içinde yazdığımız close butonuda tıkladığımızda tekrar -100% oluyor.
+sidebar açıkken haricinde bir yere bastığımızda kapanması için if için kullandığımız komutta sidebar ve menu ikonu hariç kapatılıcak. */
 function sidebarFunc() {
   //! home sidebar start
   const btnOpenSidebar = document.querySelector("#btn-menu");
@@ -24,7 +28,11 @@ function sidebarFunc() {
 
   //! home sidebar end
 }
-
+//! sistem açıklaması
+/* header içindeki search ikonuna bastığımızda css kısmında hidden ve 0 verdiğimiz search model kısmımız visible ve 1 olucak. 
+search model içindeki close ikonuna bastığımızda ise hidden ve 0'a geri dönücek. 
+son olarak modal search harici bir yere basıp kapatmak istersek modal search div bütün ekranı kapsadığı için sadece bize gözüken alan olan modal-wrapper kısmını alıp orayı harici yapıyoruz.
+böylece açtığımız ikon ve modal-wrapper kısmı hariç nereye basarsak kapatır hale gelicek.  */
 function searchModalFunc() {
   //! search modal start
   const btnOpenSearch = document.querySelector(".search-button");

@@ -1,17 +1,18 @@
-import { product1 } from "./glide.js";
+import { product1, product2 } from "./glide.js";
 
-let products = [];
-let cart = [];
-
-cart = localStorage.getItem("cart")
+let products = localStorage.getItem("products")
+  ? JSON.parse(localStorage.getItem("products"))
+  : [];
+let cart = localStorage.getItem("cart")
   ? JSON.parse(localStorage.getItem("cart"))
   : [];
 
 function addToCart() {
   const cartItems = document.querySelector(".header-cart-count");
-  const buttons = [...document.getElementsByClassName("add-to-cart")];
+  const buttons = [...document.getElementsByClassName("add-to-cart")]; //foreach yapabilmek için
   buttons.forEach((button) => {
     const inCart = cart.find((item) => item.id === Number(button.dataset.id));
+
     if (inCart) {
       button.setAttribute("disabled", "disabled");
     } else {
@@ -30,11 +31,20 @@ function addToCart() {
   });
 }
 
+function productRoute() {
+  const productLink = document.getElementsByClassName("product-link");
+  Array.from(productLink).forEach((button) => {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      const id = e.target.dataset.id;
+      localStorage.setItem("productId", JSON.stringify(id));
+      window.location.href = "single-product.html";
+    });
+  });
+}
+
 function productsFunc() {
-  products = localStorage.getItem("products")
-    ? JSON.parse(localStorage.getItem("products"))
-    : [];
-  const productsContainer = document.getElementById("product-list");
+  const productsContainer = document.getElementsByClassName("product-list");
 
   let results = "";
   products.forEach((item) => {
@@ -77,7 +87,7 @@ function productsFunc() {
           <button>
             <i class="bi bi-heart-fill"></i>
           </button>
-          <a href="#">
+          <a href="#" class="product-link" data-id=${item.id}>
             <i class="bi bi-eye-fill"></i>
           </a>
           <a href="#">
@@ -87,10 +97,14 @@ function productsFunc() {
       </div>
     </li>
     `;
-    productsContainer.innerHTML = results;
+    productsContainer[0] ? (productsContainer[0].innerHTML = results) : "";
+    productsContainer[1] ? (productsContainer[1].innerHTML = results) : "";
+
     addToCart();
   });
   product1();
+  product2();
+  productRoute();
 }
 
-export default productsFunc();
+export default productsFunc;
