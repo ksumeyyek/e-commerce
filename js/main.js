@@ -1,15 +1,17 @@
 import headerFunc from "./header.js";
 import productsFunc from "./products.js";
+import searchFunc from "./search.js";
 
 //! add product to localStorage
-(async function (){
+(async function () {
   //async mantığı js ilk bitecek olan fonksiyonu tamamlıyor
   const photos = await fetch("../js/data.json");
   const data = await photos.json();
 
   data ? localStorage.setItem("products", JSON.stringify(data)) : [];
-  productsFunc()
-})()
+  productsFunc();
+  searchFunc(data);
+})();
 
 //! add cart items to localStorage
 const cartItems = document.querySelector(".header-cart-count");
