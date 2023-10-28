@@ -191,7 +191,7 @@
             </div>
             <div class="header-right">
               <div class="header-right-links">
-                <a href="#" class="header-account">
+                <a href="account.html" class="header-account">
                   <i class="bi bi-person"></i>
                 </a>
                 <button class="search-button">
@@ -231,37 +231,44 @@
           <div class="search-heading">
             <h3>RESULTS FROM PRODUCT</h3>
           </div>
-          <div class="results">
-            <a href="#" class="result-item">
-              <img
-                src="img/products/product1/1.png"
-                class="search-thumb"
-                alt=""
-              />
-              <div class="search-info">
-                <h4>Analogue Resin Strap</h4>
-                <span class="search-sku">SKU: PD0016</span>
-                <span class="search-price">$108.00</span>
-              </div>
-            </a>
-            <a href="#" class="result-item">
-              <img
-                src="img/products/product2/1.png"
-                class="search-thumb"
-                alt=""
-              />
-              <div class="search-info">
-                <h4>Analogue Resin Strap</h4>
-                <span class="search-sku">SKU: PD0016</span>
-                <span class="search-price">$108.00</span>
-              </div>
-            </a>
-          </div>
+          <div class="results"></div>
         </div>
         <i class="bi bi-x-circle" id="close-search"></i>
       </div>
     </div>
     <!--! modal search end  -->
+
+    <!--! modal dialog start  -->
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button class="modal-close">
+          <i class="bi bi-x"></i>
+        </button>
+        <div class="modal-image">
+          <img src="img/modal-dialog.jpg" alt="" />
+        </div>
+        <div class="popup-wrapper">
+          <div class="popup-content">
+            <div class="popup-title">
+              <h3>NEWSLETTER</h3>
+            </div>
+            <p class="popup-text">
+              Sign up to our newsletter and get exclusive deals you won find any
+              where else straight to your inbox!
+            </p>
+            <form class="popup-form">
+              <input type="text" placeholder="Enter Email Address Here" />
+              <button class="btn btn-primary">SUBSCRIBE</button>
+              <label>
+                <input type="checkbox" />
+                <span>Don't show this popup again</span>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--! modal dialog end  -->
 
     <!--! single product start  -->
     <section class="single-product">
@@ -373,7 +380,7 @@
                       </div>
                     </div>
                     <div class="cart-button">
-                      <input type="number" value="1" min="1" id="quantity"/>
+                      <input type="number" value="1" min="1" id="quantity" />
                       <button
                         class="btn btn-lg btn-primary"
                         id="add-to-cart"
@@ -424,17 +431,21 @@
           <div class="single-tabs">
             <ul class="tab-list">
               <li>
-                <a href="#" class="tab-button active " data-id="desc">Description</a>
+                <a href="#" class="tab-button active" data-id="desc"
+                  >Description</a
+                >
               </li>
               <li>
-                <a href="#" class="tab-button" data-id="info"> Additional information </a>
+                <a href="#" class="tab-button" data-id="info">
+                  Additional information
+                </a>
               </li>
               <li>
                 <a href="#" class="tab-button" data-id="reviews"> Reviews </a>
               </li>
             </ul>
             <div class="tab-panel">
-              <div class="tab-panel-descriptions content active " id="desc">
+              <div class="tab-panel-descriptions content active" id="desc">
                 <p>
                   Quisque varius diam vel metus mattis, id aliquam diam rhoncus.
                   Proin vitae magna in dui finibus malesuada et at nulla. Morbi
@@ -484,7 +495,7 @@
                   2 reviews for Basic Colored Sweatpants With Elastic Hems
                 </h3>
                 <div class="comments">
-                  <ol class="comment-list"> </ol>
+                  <ol class="comment-list"></ol>
                 </div>
                 <!-- comment form start -->
                 <div class="review-form-wrapper">
@@ -519,7 +530,7 @@
                           <i class="bi bi-star-fill"></i>
                           <i class="bi bi-star-fill"></i>
                         </a>
-                        <a href="#" class="star ">
+                        <a href="#" class="star">
                           <i class="bi bi-star-fill"></i>
                           <i class="bi bi-star-fill"></i>
                           <i class="bi bi-star-fill"></i>
@@ -533,14 +544,19 @@
                         Your review
                         <span class="required">*</span>
                       </label>
-                      <textarea id="comment-text" cols="50" rows="10" required></textarea>
+                      <textarea
+                        id="comment-text"
+                        cols="50"
+                        rows="10"
+                        required
+                      ></textarea>
                     </div>
                     <div class="comment-form-author form-comment">
                       <label for="name">
                         Name
                         <span class="required">*</span>
                       </label>
-                      <input id="comment-name" type="text" required/>
+                      <input id="comment-name" type="text" required />
                     </div>
                     <div class="comment-form-email form-comment">
                       <label for="email">
