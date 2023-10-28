@@ -1,13 +1,10 @@
 import { product1, product2 } from "./glide.js";
 
-let products = localStorage.getItem("products")
-  ? JSON.parse(localStorage.getItem("products"))
-  : [];
 let cart = localStorage.getItem("cart")
   ? JSON.parse(localStorage.getItem("cart"))
   : [];
 
-function addToCart() {
+function addToCart(products) {
   const cartItems = document.querySelector(".header-cart-count");
   const buttons = [...document.getElementsByClassName("add-to-cart")]; //foreach yapabilmek için
   buttons.forEach((button) => {
@@ -43,7 +40,7 @@ function productRoute() {
   });
 }
 
-function productsFunc() {
+function productsFunc(products) {
   const productsContainer = document.getElementsByClassName("product-list");
 
   let results = "";
@@ -100,7 +97,7 @@ function productsFunc() {
     productsContainer[0] ? (productsContainer[0].innerHTML = results) : "";
     productsContainer[1] ? (productsContainer[1].innerHTML = results) : "";
 
-    addToCart();
+    addToCart(products);
   });
   product1();
   product2();

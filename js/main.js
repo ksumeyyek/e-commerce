@@ -9,7 +9,7 @@ import searchFunc from "./search.js";
   const data = await photos.json();
 
   data ? localStorage.setItem("products", JSON.stringify(data)) : [];
-  productsFunc();
+  productsFunc(data);//site yüklenmeden işlenmesi için
   searchFunc(data);
 })();
 
